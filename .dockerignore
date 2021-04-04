@@ -1,0 +1,16 @@
+**
+
+!api
+!api_yamdb
+!templates
+!titles
+!tests
+!users
+!manage.py
+!requirements.txt
+!pytest.ini
+!Dockerfile
+!docker-compose.yaml
+!fixtures.json
+
+
