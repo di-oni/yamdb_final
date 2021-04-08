@@ -23,7 +23,8 @@ jobs:
       run: flake8 .
 
     - name: Test with pytest
-      run: pytest 
+      run: |
+        pytest tests/test_*.py
 
   build:
     runs-on: ubuntu-latest
