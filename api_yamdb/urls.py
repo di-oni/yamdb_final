@@ -9,7 +9,10 @@ from rest_framework_simplejwt.views import (
 urlpatterns = [
     path(r'admindesert/', admin.site.urls),
     path('api/', include('api.urls')),
-    path('redoc/', TemplateView.as_view(template_name='redoc.html'), name='redoc'),
-    path('api/v1/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
-    path('api/v1/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+    path('redoc/', TemplateView.as_view(template_name='redoc.html'), 
+         name='redoc'),
+    path('api/v1/token/', TokenObtainPairView.as_view(), 
+         name='token_obtain_pair'),
+    path('api/v1/token/refresh/', TokenRefreshView.as_view(), 
+         name='token_refresh'),
 ]

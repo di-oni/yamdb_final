@@ -1,4 +1,4 @@
-name: Flask-app workflow
+name: Sprint19
 
 on: [push]
 
