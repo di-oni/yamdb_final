@@ -7,6 +7,7 @@
 !tests
 !users
 !manage.py
+!static
 !requirements.txt
 !pytest.ini
 !Dockerfile

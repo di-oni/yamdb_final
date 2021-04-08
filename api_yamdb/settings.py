@@ -12,12 +12,13 @@ SECRET_KEY = 'p&l%385148kslhtyn^##a1)ilz@4zqj=rq&agdol^##zgl9(vs'
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    '*'
     # 'localhost',
-    # '127.0.0.1',
-    # '[::1]',
-    # 'testserver',
-    # '192.168.99.100',
+    '130.193.54.164',
+    '192.168.99.100',
+    # # '127.0.0.1',
+    # # '[::1]',
+    # # 'testserver',
+
 ]
 
 INTERNAL_IPS = [
@@ -123,7 +124,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static/'),)
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'api_yamdb/static/'),]
 
 SITE_ID = 1
 
