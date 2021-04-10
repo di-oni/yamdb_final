@@ -110,7 +110,7 @@ dmypy.json
 
 .mypy_cache
 
-static/
+.static/
 posts/static/
 media/
 

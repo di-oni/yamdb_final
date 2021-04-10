@@ -23,8 +23,7 @@ jobs:
       run: flake8 .
 
     - name: Test with pytest
-      run: |
-        pytest tests/test_*.py
+      run: pytest
 
   build:
     runs-on: ubuntu-latest
@@ -69,9 +68,9 @@ jobs:
         username: ${{ secrets.USER }}
         key: ${{ secrets.SSH_KEY }}
         script: |
-          sudo docker pull dioni3/sprint19_final
+          sudo docker pull dioni3/sprint19
           sudo docker stop $(sudo docker ps -a -q)
-          sudo docker run --rm -d -p 5000:5000 dioni3/sprint19_final
+          sudo docker run --rm -d -p 8000:8000 dioni3/sprint19
 
   send_message:
     runs-on: ubuntu-latest
