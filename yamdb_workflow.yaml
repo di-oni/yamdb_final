@@ -60,17 +60,19 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     needs: build_and_push_to_docker_hub
+    branches:
+      - master
     steps:
-    - name: executing remote ssh commands to deploy
-      uses: appleboy/ssh-action@master
-      with:
-        host: ${{ secrets.HOST }}
-        username: ${{ secrets.USER }}
-        key: ${{ secrets.SSH_KEY }}
-        script: |
-          sudo docker pull dioni3/sprint19
-          sudo docker stop $(sudo docker ps -a -q)
-          sudo docker run --rm -d -p 8000:8000 dioni3/sprint19
+      - name: executing remote ssh commands to deploy
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USER }}
+          key: ${{ secrets.SSH_KEY }}
+          script: |
+            sudo docker-compose pull dioni3/sprint19
+            sudo docker-compose stop $(sudo docker ps -a -q)
+            sudo docker-compose run --rm -d -p 8000:8000 dioni3/sprint19
 
   send_message:
     runs-on: ubuntu-latest
