@@ -70,8 +70,8 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           script: |
             cd ./yamdb_final/
-            sudo docker-compose pull 
-            sudo docker-compose stop
+            sudo docker-compose down 
+            sudo docker-compose pull
             sudo docker-compose up
 
   send_message:
