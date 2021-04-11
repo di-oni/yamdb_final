@@ -68,6 +68,7 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USER }}
           key: ${{ secrets.SSH_KEY }}
+          command_timeout: 15m
           script: |
             cd ./yamdb_final/
             sudo docker-compose down 
