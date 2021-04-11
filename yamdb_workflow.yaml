@@ -55,7 +55,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: dioni3/sprint19_final:latest 
+          tags: dioni3/sprint19:latest 
 
   deploy:
     runs-on: ubuntu-latest
