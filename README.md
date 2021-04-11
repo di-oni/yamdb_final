@@ -1,4 +1,4 @@
-https://github.com/di-oni/yamdb_final/actions/workflows/Sprint19/badge.svg
+![example workflow](https://github.com/di-oni/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
 
 YamDB
 
