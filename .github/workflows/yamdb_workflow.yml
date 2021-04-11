@@ -69,6 +69,7 @@ jobs:
           username: ${{ secrets.USER }}
           key: ${{ secrets.SSH_KEY }}
           script: |
+            cd ./yamdb_final/
             sudo docker-compose pull 
             sudo docker-compose stop
             sudo docker-compose up
